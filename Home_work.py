@@ -16,8 +16,23 @@
     
 # print(round(math.pi, count))
 
-import math
+# import math
 
-d = int(input('Введите количество цифр после запятой: '))
+# d = int(input('Введите количество цифр после запятой: '))
 
-print(round(math.pi, d))
+# print(round(math.pi, d))
+
+# Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
+
+n = int(input("Введите натеральное число: "))
+f = []
+d = 2
+m = n
+while d * d <= n:
+    if n % d == 0:
+        f.append(d)
+        n//=d
+    else:
+        d += 1
+f.append(n)
+print(f'{m} = {f}') 
